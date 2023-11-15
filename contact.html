@@ -7,26 +7,31 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("user_pdByzEMSsRVfAeA@uOccz");
+        })();
+    </script>
     <title>Warung Bu Wahyu</title>
 </head>
-<body>
+<body class="body-contact">
     <div class="container">
     <nav>
         <div class="logo"><a href="index.html">W.B. Wahyu</a>
         </div>
+            <ul class="nav_menu">
+                <li class="nav-links"><a href="index.html">Home</a></li>
+                <li class="nav-links"><a href="menu.html">Menu</a></li>
+                <li class="nav-links"><a href="testimonies.html">Testimonies</a></li>
+                <li class="nav-links"><a href="aboutus.html">About Us</a></li>
+                <li class="nav-links"><a href="contact.html">Contact</a></li>
+            </ul>
             <label for="check" class="checkbox">
                 <i class="ri-menu-line"></i>
               </label>
-              <input type="checkbox" name="check" id="check" />
-      
-              <ul class="nav_menu">
-                <li class="nav-links"><a href="index.html">Rumah</a></li>
-                <li class="nav-links"><a href="menu.html">Menu</a></li>
-                <li class="nav-links"><a href="testimonies.html">Testimoni</a></li>
-                <li class="nav-links"><a href="aboutus.html">Tentang Kami</a></li>
-                <li class="nav-links"><a href="contact.html">Kontak</a></li>
-              </ul>
-
+               <input type="checkbox" name="check" id="check" />
     </nav>
     </div>
     
@@ -38,33 +43,32 @@
         <div class="content-box">
             <div class="contact-left">
                 <h3>Sent your request</h3>
-                <form action="">
+                <form onsubmit="emailSend(); resetForm(); return false;" action="">
                     <div class="input-row">
                         <div class="input-group" >
                             <label for="">Nama</label>
-                            <input type="text" placeholder="Masukan Nama">
+                            <input type="text" id="nama" placeholder="Masukan Nama">
                         </div>
                         <div class="input-group">
                             <label for="">No.Tlp</label>
-                            <input type="text" placeholder="No.Tlp">
+                            <input type="text" id="notlp" placeholder="No.Tlp">
                         </div>
                     </div>
                     <div class="input-row">
                         <div class="input-group">
                             <label for="">Email</label>
-                            <input type="email" placeholder="Email">
+                            <input type="email" id="email" placeholder="Email">
                         </div>
                         <div class="input-group">
                             <label for="">Alamat</label>
-                            <input type="text" placeholder="Alamat">
+                            <input type="text" id="alamat" placeholder="Alamat">
                         </div>
                     </div>
                     <label for="">Pesan</label>
-                    <textarea rows="-10" placeholder="Pesan"></textarea>
-                    
-                    <button class="btn-cnt" type="button">Submit</button>
+                    <textarea rows="-10" placeholder="Pesan" id="pesan"></textarea>
+                    <button type="submit" class="button" onclick="SendMail( )">Kirim</button>
                 </form>
-
+                
             </div>
             <div class="contact-right">
                 <h3>Reach us</h3>
@@ -88,26 +92,43 @@
 
     <!-- copyright -->
     <center>
-    <div class="copy">
-        <div>
-            <div>
-                <h3>W.B.Wahyu</h3>
-            </div>
-            <div class="icon-footer">
-                <a href="" style="text-decoration: none;"  class="icn-contact"><i class="ri-mail-line"></i></a>
-                <a href="" style="text-decoration: none;"  class="icn-contact"><i class="ri-phone-line"></i></a>
-                <a href="https://maps.app.goo.gl/sF7ySpATCU19f7oQ9" style="text-decoration: none;" class="icn-contact"><i class="ri-map-pin-line"></i></a>
-            </div>
-        </div>
-        <div class="line-footer"></div>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-crtby">
+                    <h2>Create by</h2><br>
+                    <p class="footer-narasi">
+                        <a href="testimonies.html">I Gusti Agung Gde Raditya Pradana (Testimonies) </a><br>
+                        <a href="index.html">I Kadek Malvino Sukadana (Home)</a><br>
+                        <a href="menu.html">I Made Rai Adnyana (Menu)</a><br>
+                        <a href="aboutus.html">I Wayan Wahyu Putra Dinata (Aboutus)</a><br>
+                        <a href="#">I.B.Gede Ambara Sindu Negara (Contact)</a>
+                    </p>
+                </div>
 
-        <div class="txt-copy">
-            <a> ©2023 All right reserved. Rahayoee.com </a>
+                <div class="sosial">
+                    <h2 class="sosial">SOSIAL</h2>
+                    <div class="footer-sosmed">
+                        <a href="https://maps.app.goo.gl/sF7ySpATCU19f7oQ9" target="_blank" class="icon-footer">
+                            <i class="ri-map-pin-line"></i>
+                        </a>
+                        <a href="" class="icon-footer">
+                            <i class="ri-mail-line"></i>
+                        </a>
+                        <a href="https://wa.me/085901349809" class="icon-footer">
+                            <i class="ri-phone-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+           <p class="Copyright"> © Copyright 2023 |  Made by <strong>Rahayoee.com</strong></p>
         </div>
-    </div>
     </center>
 
     <!-- LINK JAVASCRIPT -->
     <script src="java.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contact_form_to_email.js"></script>
+
 </body>
 </html>
