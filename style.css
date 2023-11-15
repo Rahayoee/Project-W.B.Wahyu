@@ -419,38 +419,67 @@ button:hover {
     }
 
     /* --FOOTER--- */
-    .copy{
-        background-color: rgb(29, 204, 102);
-        width: 52.7vh;
-        color: rgb(247, 247, 229);
-        padding-top: 30px;
-        transform: translate(-10%,20%);
-        height: 160px;
+    .footer{
+    background-color: rgb(29, 204, 102);
+    color: rgb(247, 247, 229);
+    height: 380px;
+    width: 75%;
+    
+    }
+    
+    .footer-content {
+        display: contents;
+        justify-content: space-between;
+        text-align: left;
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+    
+    .footer-crtby{
+        padding-top: 20px;
+        margin-left: 40px;
+    }
+    
+    .footer-narasi {
+        font-size: 12px;
+        width: 500px;
+    }
+    
+    .footer-narasi a{
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+    
+    .sosial{
+        margin-left: 20px;
+        padding-top: 12px;
+    }
+    
+    .footer-sosmed {
+        margin-left: 20px;
+        width: 300px;
+        display: flex;
     }
     
     .icon-footer{
-        padding-top: 10px;
-        padding-left: 20px;
-        letter-spacing: 20px;
-        font-size: 20px;
+        font-size: 200%;
+        width: 50px;
+        color: #fff;
         text-decoration: none;
-        list-style: none;
-        color: rgb(247, 247, 229);
     }
     
-    .txt-copy{
+    .Copyright{
+        margin: 40px;
+        margin-top: 25px;
         font-size: 10px;
-        margin-top: 0px;
     }
     
-    .line-footer{
-        height: 2px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        width: 80%;
-        background-color: rgb(247, 247, 229)
-    }
-}
+    hr {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 6%;
+    }
+        }
 @media screen and (max-width: 560px) {
   .search {
     display: none;
@@ -1050,34 +1079,61 @@ tr td{
 /* -----CONCACT END------- */
 
 /* -----COPYRIGHT----- */
-.copy{
+/* FOOTER */
+.footer{
     background-color: rgb(29, 204, 102);
-    width: 216.9vh;
+    display: flex;
+    flex-direction: column;
     color: rgb(247, 247, 229);
-    padding-top: 30px;
-    height: 230px;
-    position: relative;
-    bottom: 0;
-    transform: translate(-7%,20%);
+    height: 380px;
+    width: 212vh;
+    box-sizing: border-box;
+}
+.body-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 50px;
+}
 
+.footer-narasi {
+    font-size: 15px;
+    width: 550px;
+}
+
+.footer-narasi a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.footer-sosmed {
+    width: 300px;
+    display: flex;
 }
 
 .icon-footer{
-    padding-top: 20px;
-    padding-left: 20px;
-    letter-spacing: 20px;
-    font-size: 20px;
+    font-size: 200%;
+    width: 50px;
+    color: #fff;
     text-decoration: none;
-    list-style: none;
-    color: rgb(247, 247, 229);
 }
 
-.line-footer{
-    height: 2px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    width: 80%;
-    background-color: rgb(247, 247, 229);
+.Copyright{
+    margin: 40px;
+    font-size: 10px;
+}
+
+hr {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 6%;
 }
 
 @media screen and (max-width:560px) {
