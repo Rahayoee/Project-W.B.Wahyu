@@ -16,29 +16,36 @@
             <div class="logo">
                 <a href="index.html">W.B. Wahyu</a>
             </div>
-            <label for="check" class="checkbox">
-                <i class="ri-menu-line"></i>
-              </label>
-              <input type="checkbox" name="check" id="check" />
-      
-              <ul class="nav_menu">
+            <ul class="nav_menu">
                 <li class="nav-links"><a href="index.html">Rumah</a></li>
                 <li class="nav-links"><a href="menu.html">Menu</a></li>
                 <li class="nav-links"><a href="testimonies.html">Testimoni</a></li>
                 <li class="nav-links"><a href="aboutus.html">Tentang Kami</a></li>
                 <li class="nav-links"><a href="contact.html">Kontak</a></li>
-              </ul>
-            
+            </ul>
+            <div class="search1">
+                <input type="text" placeholder="search..">
+                <button class="btn-search1">Go</button>
+            </div>
+            <label for="check" class="checkbox">
+                 <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
         </nav>
 
         <div class="aboutus">
             <div class="judul">
                 <h1>TENTANG KAMI</h1>
             </div>
-            <div class="content-about">
+            <div class="content">
                 <div class="ftwarung1">
-                    <div class="ft1">
-                        <img src="image/foto warung depan.jpg" alt="">
+                    <div id="slideshow-container">
+                        <div class="mySlides">
+                            <img src="foto warung depan.jpg" alt="Image 1">
+                        </div>
+                        <div class="mySlides">
+                            <img src="foto tempat makan.jpg" alt="Image 2">
+                        </div>
                     </div>
                     <div class="sejarah">
                         <div class="H2">
@@ -52,7 +59,7 @@
                 
                 <div class="ftwarung2">
                     <div class="ft1">
-                        <img src="image/foto tempat makan.jpg" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="sejarah">
                         <div class="H2">
@@ -63,13 +70,28 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                   
-                   
-                </div>
-
             </div>
         </div>
-        
     </div>
+
+    <script href="">
+        let slideIndex = 0;
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds (2000 milliseconds)
+    }
+
+    // Initial call to start the slideshow
+    showSlides();
+    </script>
 </body>
+</html>
