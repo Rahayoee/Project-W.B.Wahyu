@@ -112,6 +112,27 @@
     </div>
 
     <!-- LINK JAVASCRIPT -->
-    <script src="java.js"></script>
+    <script>
+      const allStar = document.querySelectorAll('.rating .star');
+const ratingValue = document.querySelector('.rating input');
+
+allStar.forEach((item, idx) => {
+  item.addEventListener('click', function () {
+    let click = 0;
+    ratingValue.value = idx + 1;
+    console.log(ratingValue.value);
+
+    allStar.forEach((i, iIdx) => {
+      if (iIdx <= idx) {
+        i.classList.replace('fa-regular', 'fa-solid');
+        i.classList.add('active');
+      } else {
+        i.classList.replace('fa-solid', 'fa-regular');
+        i.classList.remove('active');
+      }
+    });
+  });
+});
+    </script>
   </body>
 </html>
